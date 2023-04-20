@@ -10,6 +10,8 @@ import Inventory from "./components/Inventory/Inventory";
 import Login from "./components/Login/Login";
 import cartProductsLoader from "./Loader/CartProductsLoader";
 import Checkout from "./components/Checkout/Checkout";
+import Register from "./components/Register/Register";
+import AuthProvider from "./components/AuthProvider/AuthProvider";
 
 const router = createBrowserRouter([
   {
@@ -31,11 +33,15 @@ const router = createBrowserRouter([
       },
       {
         path: "checkout",
-        element: <Checkout/>,
+        element: <Checkout />,
       },
       {
         path: "login",
         element: <Login />,
+      },
+      {
+        path: "register",
+        element: <Register />,
       },
     ],
   },
@@ -43,6 +49,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );

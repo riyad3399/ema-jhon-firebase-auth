@@ -1,0 +1,45 @@
+.form-container {
+  width: 40%;
+  height: 540px;
+  margin: 30px auto;
+  border: 1px solid rgb(212, 26, 26);
+  padding: 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-control input {
+  width: 80%;
+  height: 50px;
+  margin-left: 40px;
+  border-radius: 5px;
+  font-size: large;
+  padding-left: 10px;
+}
+.form-control label {
+  display: block;
+  font-size: larger;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.btn-login{
+    padding: 15px 36%;
+    background-color: rgb(123, 123, 224);
+    border-radius: 8px;
+    border: none;
+    font-size: large;
+    color: white;
+    margin: 20px 40px;
+}
+
+.btn-login:hover{
+    background-color: rgb(74, 74, 206);
+}
+
+.form-title{
+  font-size: xx-large;
+  color: blue;
+  text-align: center;
+}
