@@ -1,5 +1,8 @@
 import React, { useContext, useState } from "react";
 import { UserContext } from "../AuthProvider/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const [error, setError] = useState("");
@@ -27,7 +30,8 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         const loggedUser = result.user;
-        console.log(loggedUser);
+          console.log(loggedUser);
+          toast.success('Register successful', {theme:'dark', autoClose:3000})
       })
       .catch((error) => {
         console.log(error);
@@ -52,8 +56,10 @@ const Register = () => {
           <input type="password" name="confirm" id="" required />
         </div>
         <input className="btn-login" type="submit" value="Register" />
-      </form>
-      <p>{error}</p>
+          </form>
+          <p className="link">You have an account? please <Link to='/login'>Login</Link></p>
+          <p>{error}</p>
+          <ToastContainer theme="dark" autoClose={3000}></ToastContainer>
     </div>
   );
 };

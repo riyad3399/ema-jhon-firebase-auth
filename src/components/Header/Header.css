@@ -16,3 +16,11 @@
 .manu a:hover{
     color: orange;
 }
+
+.text-white{
+    color: white;
+}
+
+.btn-logout{
+    background-color: #ffff;
+}

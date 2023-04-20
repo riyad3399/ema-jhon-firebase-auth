@@ -43,3 +43,14 @@
   color: blue;
   text-align: center;
 }
+
+.link{
+  text-align: center;
+  margin: 0px;
+
+}
+
+.password-show{
+  margin-left: 40px;
+  margin-top: 10px;
+}
